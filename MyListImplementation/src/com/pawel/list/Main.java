@@ -23,6 +23,16 @@ public class Main {
 		
 		System.out.println("List: "+myList.toString());
 		System.out.println("List size: "+myList.getListSize());
+		
+		myList.addAtIndex(200, 4);
+		myList.addAtIndex(300, 5);
+		myList.addAtIndex(400, 6);
+		myList.addAtIndex(900, 2);
+		myList.addAtIndex(700, 0);
+		myList.addAtIndex(990, 0);
+		
+		System.out.println("List: "+myList.toString());
+		System.out.println("List size: "+myList.getListSize());
 	}
 	
 }

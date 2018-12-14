@@ -9,7 +9,7 @@ public class MyList {
 	//add to the end of the list
 	public void add(Object data) {
 		if(head==null) {
-			head=new Node(data);
+			head = new Node(data);
 		} else {
 			Node currentNode = head;
 			while(currentNode.getNext() != null) {
@@ -18,6 +18,35 @@ public class MyList {
 			currentNode.setNext(new Node(data));
 		}
 		this.size++;
+	}
+	
+	
+	//add to the specific index of list
+	public void addAtIndex(Object data, int index) {
+		int i=0;
+		if(head==null && index==0) {
+			head = new Node(data);
+		} else {
+			Node currentNode=head;
+			Node prevNode = null;
+			System.out.println("Before while: i:"+i+", index:"+index);
+			while(i < index) {
+				System.out.println("i:"+i+", index:"+index);
+				prevNode=currentNode;
+				currentNode=currentNode.getNext();
+				i++;
+			}
+			if(prevNode==null) {
+				System.out.println("Adding head");
+				head = new Node(data);
+				head.setNext(currentNode);
+				this.size++;
+			} else {
+				prevNode.setNext(new Node(data));
+				prevNode.getNext().setNext(currentNode);
+				this.size++;
+			}	
+		}
 	}
 
 	
