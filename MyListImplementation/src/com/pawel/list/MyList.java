@@ -71,6 +71,32 @@ public class MyList {
 	}
 	
 	
+	//remove element at the specific index of list
+	public void removeAtIndex(int index) {
+		int i=0;
+		if(head.getNext()==null) {
+			head=null;
+		}else {
+			Node prevNode = null;
+			Node currentNode = head;
+			while(i < index) {
+				prevNode=currentNode;
+				currentNode=currentNode.getNext();
+				i++;
+			}
+			if(prevNode==null) {
+				head=currentNode.getNext();
+			} else {
+				if(currentNode.getNext() != null) {
+					prevNode.setNext(currentNode.getNext());
+				}
+				currentNode=null;				
+			}
+		}
+		this.size--;
+	}
+
+	
 	public String toString() {
 		String str = "[";
 		

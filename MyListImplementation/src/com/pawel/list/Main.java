@@ -13,14 +13,12 @@ public class Main {
 		myList.add(50);
 		myList.add(60);
 		myList.add(70);
-	
 		System.out.println("List: "+myList.toString());
 		System.out.println("List size: "+myList.getListSize());
 		
 		myList.remove();
 		myList.remove();
 		myList.remove();
-		
 		System.out.println("List: "+myList.toString());
 		System.out.println("List size: "+myList.getListSize());
 		
@@ -30,9 +28,14 @@ public class Main {
 		myList.addAtIndex(900, 2);
 		myList.addAtIndex(700, 0);
 		myList.addAtIndex(990, 0);
+		System.out.println("List: "+myList.toString());
+		System.out.println("List size: "+myList.getListSize());
 		
+		myList.removeAtIndex(2);
+		myList.removeAtIndex(3);
+		myList.removeAtIndex(0);
+		myList.removeAtIndex(0);
 		System.out.println("List: "+myList.toString());
 		System.out.println("List size: "+myList.getListSize());
 	}
-	
 }
