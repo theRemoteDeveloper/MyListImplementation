@@ -29,7 +29,6 @@ public class MyList {
 		} else {
 			Node currentNode=head;
 			Node prevNode = null;
-			System.out.println("Before while: i:"+i+", index:"+index);
 			while(i < index) {
 				System.out.println("i:"+i+", index:"+index);
 				prevNode=currentNode;
@@ -37,7 +36,6 @@ public class MyList {
 				i++;
 			}
 			if(prevNode==null) {
-				System.out.println("Adding head");
 				head = new Node(data);
 				head.setNext(currentNode);
 				this.size++;
