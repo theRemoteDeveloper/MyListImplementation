@@ -2,8 +2,8 @@ package com.pawel.list;
 
 public class Node {
 	
-	Node next;
-	Object data;
+	private Node next;
+	private Object data;
 	
 	
 	public Node(Object value) {

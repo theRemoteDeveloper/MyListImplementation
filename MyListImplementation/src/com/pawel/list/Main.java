@@ -37,5 +37,12 @@ public class Main {
 		myList.removeAtIndex(0);
 		System.out.println("List: "+myList.toString());
 		System.out.println("List size: "+myList.getListSize());
+		
+		System.out.println("Element at index 1: "+myList.getNodeValueAtIndex(1));
+		System.out.println("Element at index 2: "+myList.getNodeValueAtIndex(0));
+		
+		System.out.println("First element: "+myList.getFirstNode().getData().toString());
+		System.out.println("Last element: "+myList.getLastNode().getData().toString());
+		
 	}
 }

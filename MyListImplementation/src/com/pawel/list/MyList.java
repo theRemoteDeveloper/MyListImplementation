@@ -30,7 +30,6 @@ public class MyList {
 			Node currentNode=head;
 			Node prevNode = null;
 			while(i < index) {
-				System.out.println("i:"+i+", index:"+index);
 				prevNode=currentNode;
 				currentNode=currentNode.getNext();
 				i++;
@@ -95,7 +94,53 @@ public class MyList {
 		}
 		this.size--;
 	}
+	
+	
+	//get list element at specific index
+	public Node getNodeAtIndex(int index) {
+		Node node;
+		int i=0;
+		node=head;
+		while(i<index) {
+			node=node.getNext();
+			i++;
+		}
+		return node;
+	}
+	
+	
+	public Node getFirstNode() {
+		return getNodeAtIndex(0);
+	}
 
+	
+	public Node getLastNode() {
+		return getNodeAtIndex(this.size-1);
+	}
+	
+	
+	public String getNodeValueAtIndex(int index) {
+		Node node = getNodeAtIndex(index);
+		return node.getData().toString();
+	}
+	
+	
+	public void reverse() {
+	    Node next = null; 
+	    Node prev = null; 
+		int i = 0;
+	    
+		while(head != null && i<this.getListSize()) {
+			next = head.getNext();
+	    		head.setNext(prev);
+	    		prev=head;
+	    		head=next;
+	  
+	    		i++;
+		}
+		System.out.println("end");
+	}
+	
 	
 	public String toString() {
 		String str = "[";
@@ -120,6 +165,12 @@ public class MyList {
 	
 	public int getListSize() {
 		return this.size;
+	}
+
+
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return this.getListSize()==0;
 	}
 	
 }
